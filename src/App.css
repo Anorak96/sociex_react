@@ -1,0 +1,40 @@
+.home {
+    min-height: 100vh;
+    background-color: #263A47; 
+    margin-bottom: 20px
+}
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+.main {
+    background-color: #263A47 !important;
+    margin-bottom: 20px;
+}
+.nav-user-image {
+    border: 2px solid #009394;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
+.nav-link {
+    color: #FFFFFF !important;
+}
+.fa-lg {
+    font-size: 1.25em;
+    line-height: .05em;
+    height: 1em;
+    vertical-align: -.2em;
+    overflow: visible;
+    box-sizing: content-box;
+}
+.navbar{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: .5rem .5rem;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+.capitalize {
+    text-transform: capitalize;
+}

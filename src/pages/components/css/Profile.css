@@ -1,0 +1,105 @@
+.profile-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 75px);
+    margin-bottom: -15px;
+}
+.cover{
+    grid-area: 1 / 1 / 7 / 8;
+}
+.cover-img{
+    width: 100%;
+    height: 81%;
+    width: -webkit-fill-available;
+    object-fit: fill;
+    grid-area: 1 / 1 / 7 / 8;
+}
+.profile-pic{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    border: 2px solid white;
+}
+.prof-pic {
+    grid-area: 5 / 1 / 5 / 2;
+    justify-self: flex-end;
+}
+.profile-name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 17px;
+    color: #bfefef;
+}
+.username{
+    grid-area: 6 / 2 / 7 / 3;
+}
+.profile-button {
+    grid-area: 5 / 6 / 6 / 8;
+}
+.edit-bottons {
+    color: #fff !important;
+    background-color: #FFBA00 !important;
+    border-color: #FFBA00 !important;
+    box-shadow: none;
+}
+.user-grid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.photo-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+.photos-item {
+    height: 101px; 
+    width:78px; 
+    object-fit: cover;
+}
+.photos-item:hover{
+    transform: translateY(5px) scale(1.4);
+    object-fit: contain;
+}
+.photo-prev{
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 6px;
+}
+.feed{
+    background-color: #4A5B6A !important;
+    height: fit-content;
+}
+.feed-icon{
+    background-color: #728495 !important;
+}
+.card-header {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.img-xs {
+    width: 37px;
+    height: 37px;
+}
+.follow-botton {
+    color: #fff !important;
+    background-color: #6D9773 !important;
+    border-color: #6D9773 !important;
+    box-shadow: none;
+    height: 41px !important;
+    width: 45px !important;
+    margin-left: 15px !important; 
+    margin-top: 9px !important;
+}
+.update-cover-pic{
+    max-height: 300px;
+    width: 100%;
+}
+.update-profile-picture{
+    height: 251px;
+    border-radius: 19% !important;
+}
