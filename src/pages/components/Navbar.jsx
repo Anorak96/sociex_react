@@ -64,8 +64,8 @@ const Navbar = () => {
                         <PostModal show={show} setShow={setShow} />   
                     </Nav> :
                     <Nav className="justify-content-end">
-                        <Nav.Link className='me-2 px-1' href='/login'>Login</Nav.Link>
-                        <Nav.Link className='me-2 px-1'href='/signup'>SignUp</Nav.Link>
+                        <Nav.Link className='me-2 px-1' href='/#/login'>Login</Nav.Link>
+                        <Nav.Link className='me-2 px-1'href='/#/signup'>SignUp</Nav.Link>
                     </Nav>
                 }
                 <NavBar.Toggle aria-controls="responsive-navbar-nav" />
