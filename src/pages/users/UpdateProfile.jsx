@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import api from '../../api'
+import { useNavigate } from 'react-router-dom'
 import '../components/css/Profile.css'
 
 const UpdateProfile = () => {
-
+	const navigate = useNavigate()
 	const [user, setUser] = useState([])
 	const [email, setEmail] = useState('')
 	const [about, setAbout] = useState('')
@@ -44,11 +45,14 @@ const UpdateProfile = () => {
 	};
 
 	function updateProfile(e){
-		e.preventDefault()
-		console.log(updateData)
-		// api.put('api/user', updateData, {
-		// 	headers: { "Content-Type": "multipart/form-data" },
-		// })
+		api.put('api/user', updateData)
+		.then(res => {
+	            console.log(res.data)
+	        })
+	        .catch(err => {
+	            console.log(err.message)
+	        })
+		navigate(`/profile/${user.username}`)
 	}
 
 	return (
