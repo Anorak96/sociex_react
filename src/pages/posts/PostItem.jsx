@@ -16,7 +16,7 @@ const PostItem = ({ post, loading, error }) => {
     const [views, setViews] = useState(post.views)
     const [liked, setLiked] = useState(post.is_liked || false)
     const postId = {post_id: post.id}
-
+    console.log(post)
     function likePost(e){
         e.preventDefault()
         api.post('api/post/like', postId)
