@@ -51,7 +51,7 @@ const PostItem = ({ post, loading, error }) => {
                     <div className="d-flex flex-row justify-content-between py-1 align-items-center border-bottom">
                         <div className="d-flex flex-row align-items-center feed-text px-2">
                             <Link to={`/profile/${post.user?.username}`}>
-                                <img className="rounded-circle post-user-img" src={`${post.user?.profile_pic}`} />
+                                <img className="rounded-circle post-user-img" src={`${api.defaults.baseURL}${post.user?.profile_pic}`} />
                             </Link>
                             <div className="d-flex flex-column flex-wrap mx-2">
                                 <div className="post-user">
