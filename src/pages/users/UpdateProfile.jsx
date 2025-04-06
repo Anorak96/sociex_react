@@ -17,8 +17,6 @@ const UpdateProfile = () => {
 		coverPic: null,
 	});
 
-	const updateData = {email: email, bio: about, profile_pic: profilePic, cover_pic: coverPic}
-
 	useEffect(() => {
 		api.get('api/user/')
 		.then(res => {
@@ -45,14 +43,35 @@ const UpdateProfile = () => {
 	};
 
 	function updateProfile(e){
-		api.put('api/user', updateData)
+		e.preventDefault()
+		
+		const formData = new FormData();
+
+		if (about){
+            formData.append("bio", about);  
+        }
+
+		if (email){
+            formData.append("email", email);  
+        }
+
+		if (profilePic){
+			formData.append("profile_pic", profilePic);
+        }
+
+		if (coverPic){
+			formData.append("cover_pic", coverPic);
+        }
+		
+		console.log(formData)
+		api.patch(`api/user/${user.username}/update`, formData)
 		.then(res => {
-	            console.log(res.data)
-	        })
-	        .catch(err => {
-	            console.log(err.message)
-	        })
-		navigate(`/profile/${user.username}`)
+            console.log(res.data)
+			navigate(`/profile/${user.username}`)
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
 	}
 
 	return (
