@@ -83,7 +83,7 @@ const PostItem = ({ post, loading, error }) => {
                             <span className='caption'>{post.caption}</span>
                             <div className="post-image">
                                 {post && post.post_images && post.post_images.map((image, index) => (
-                                    <img className="image-item" key={index} src={`${api.defaults.baseURL}${image.image}`} alt={image.image} />
+                                    <img className="image-item" key={index} src={`${image.image}`} alt={image.image} />
                                 ))}
                             </div>
                         </div>
