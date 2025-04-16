@@ -29,9 +29,8 @@ const PostItem = ({ post, loading, error }) => {
         })
     } 
 
-    function deletePost(e){
-        e.preventDefault()
-        api.delete(`api/post/feeds/post/${post.id}/delete`)
+    function deletePost(){
+        api.post(`api/post/feeds/post/${post.id}/delete`)
         .then(res => {
             console.log(res.data)
             navigate('/')
